@@ -1,0 +1,20 @@
+<h1> Welcome to Surf Spot Tracker</h1>
+<h3> We track the waves so you don't have to!</h3>
+<br>
+<p>Please sign in or signup below:</p>
+
+<nav>
+  <% if logged_in? %>
+
+    <a href="/surf_spots/new"> Create Surf Spot </a>
+    <a href="/logout"> Log Out </a>
+    <p>Welcome, <%=current_user.username %></p>
+
+  <% else %>
+    <a href="/signup">Sign Up</a>
+    <br>
+    <br>
+    <a href="/login"> Sign In </a>
+  <%end %>
+
+</nav>
