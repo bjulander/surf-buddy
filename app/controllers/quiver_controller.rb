@@ -1,0 +1,3 @@
+class QuiverController < ApplicationController
+    
+end
