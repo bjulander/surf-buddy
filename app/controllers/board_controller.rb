@@ -1,6 +1,6 @@
 class BoardController < ApplicationController
     get '/boards' do
-        if logged_in?
+        if !logged_in?
           @boards = Board.all
           erb :'boards/index'
         else

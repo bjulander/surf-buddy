@@ -1,9 +1,13 @@
 require 'bundler/setup'
-Bundler.require
-
-ActiveRecord::Base.establish_connection(
-  :adapter => "sqlite3",
-  :database => "db/surfer.sqlite"
-)
+Bundler.require(:default)
 
 require_all 'app'
+
+
+
+# ActiveRecord::Base.establish_connection(
+#   :adapter => "sqlite3",
+#   :database => "db/surfer.sqlite"
+# )
+
+set(:database, {adapter: "sqlite3", database: "db/surfer.sqlite3"})

@@ -11,10 +11,9 @@
 <br>
 <p><p>
     <nav>
-    <% if !logged_in? %>
-        <a href="/boards"> 
+        <a href="/boards/index"> 
         <button type="button" value="Quiver" class="front_button"> 
-        Qwiver</button> </a> <br>
+        Quiver</button> </a> <br>
         <br><br>
         <a href="/breaks">
         <button type="button" value="Breaks" class="front_button"> 
@@ -26,9 +25,4 @@
         <br><br>
         <br>
         <a href="/logout"> Log Out </a>
-
-    <% else %>
-        <a href="/signup">Sign Up</a>
-        <a href="/login"> Login In</a>
-    <%end %>
     </nav>
