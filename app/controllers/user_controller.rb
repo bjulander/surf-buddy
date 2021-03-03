@@ -1,33 +1,29 @@
 class UserController < ApplicationController
-  get '/users/:slug' do
-    @user = User.find_by_slug(params[:slug])
-    erb :'users/show'
-  end
 
   get '/signup' do
     if !logged_in?
       erb :'users/new', locals: {message: "No kooks allowed!"}
     else
-      erb :'users/show'
+      erb :'/show'
     end
   end
 
   post '/signup' do
     if params[:username] == "" || params[:email] == "" || params[:password] == ""
-      redirect to 'users/signup'
+      redirect to '/users3/signup'
     else
-      @user = User.new(:username => params[:username], :email => params[:email], :password => params[:password])
-      @user.save
+      @user = User.create(:username => params[:username], :email => params[:email], :password => params[:password])
       session[:user_id] = @user.id
-      erb :'users/show'
+      erb :'/show'
     end
   end
 
   get '/login' do
-    if !logged_in?
-      redirect to 'users/show'
+    # if session[:user_id]
+     if !logged_in?
+      erb :'/users/home'
     else
-      redirect to 'users/signup'
+      redirect to '/users2/signup'
     end
   end
 
@@ -35,20 +31,15 @@ class UserController < ApplicationController
     @user = User.find_by(:username => params[:username])
     if @user && @user.authenticate(params[:password])
       session[:user_id] = @user.id
-      redirect to 'users/show'
+      redirect to '/users1/show'
     else
-      redirect to 'users/signup'
+      redirect to '/users1/signup'
     end
   end
 
   get '/logout' do
-    if logged_in?
-      session.destroy
-      redirect to '/login'
-    else
+      session.clear
       redirect to '/'
-    end
   end
-
 
 end
