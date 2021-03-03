@@ -1,3 +1,0 @@
-class BreakController < ApplicationController
-    
-end

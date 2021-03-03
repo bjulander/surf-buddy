@@ -1,0 +1,16 @@
+<h1> Welcome brah</h1>
+<h3> </h3>
+<br>
+<p>What we tryna do today?<p>
+    <nav>
+    <% if logged_in? %>
+        <a href="/boards> View Quiver </a>
+        <a href="/breaks> View Breaks </a>
+        <a href="/leashes> Leashes </a>
+        <a href="/logout"> Log Out </a>
+
+    <% else %>
+        <a href="/signup">Sign Up</a>
+        <a href="/login"> Login In</a>
+    <%end %>
+    </nav>
