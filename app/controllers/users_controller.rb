@@ -9,8 +9,10 @@ class UsersController < ApplicationController
     end
 
     post '/signup' do
-        @user = User.create(params)
-        if @user.id
+        @user = User.create(username: params[:username], email: params[:email], password: params[:password])
+        binding.pry
+        @messages = @user.errors.full_messages
+        if @user.id && @messages.empty?
             session[:user_id] = @user.id
             redirect to '/users/home'
         else
@@ -18,8 +20,14 @@ class UsersController < ApplicationController
         end
     end
 
-    get '/users/home' do 
-        erb :'/users/home'
+    get '/users/home' do
+        redirect_if_not_logged_in
+        if session[:user_id]
+            @user = current_user
+            erb :'/users/home'
+        else
+            redirect to "/signup"
+        end
     end
 
     get '/users/new' do

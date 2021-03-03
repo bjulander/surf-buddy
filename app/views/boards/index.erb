@@ -1,1 +1,20 @@
-<h1> Sick Quiver!</h1>
+<h1><%= @user.username %>'s Quiver </h1>
+
+<a href="/boards/new"> 
+<button type="button" value="Add New Board">Add New Board</button></a></p>
+</div>
+
+# <a href="/boards/edit"> 
+# <button type="button" value="Edit Board">Edit Board</button></a> </p>
+# </div>
+
+<p> Welcome, <%= @user.username %>
+
+<% @boards.each do |a| %>
+  <div>
+    <label>
+    <%= a.id%>
+    <%= a.nickname%>
+    
+  </div>
+<% end %>
