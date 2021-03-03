@@ -1,0 +1,36 @@
+<h1>Let's add a new board!</h1>
+
+<form action="/boards" method="post">
+
+    <label> Board Type: </label>
+    <br>
+        <input type="checkbox" id="short" name="type">
+            <label for="type">Shortboard</label>
+    <br>
+        <input type="checkbox" id="long" name="long" value="longboard">
+            <label for="long">Longboard</label>
+    <br>
+        <input type="checkbox" id="fun" name="fun" value="Fun">
+            <label for="fun">Funboard</label>
+    <br>
+        <input type="checkbox" id="fish" name="fish" value="Fish">
+            <label for="fish">Fish</label>  
+    <br>
+        <input type="checkbox" id="beater" name="beater" value="Beater">
+            <label for="beater">Beater</label>
+    <br>
+        <input type="checkbox" id="gun" name="gun" value="Gun">
+        <label for="gun">Gun</label>
+    <br>
+    <br>
+    <p><label> Material: <input type="text" name="material"></label></p>
+    <p><label> Brand: <input type="text" name="brand"></label></p>
+    <p><label> Color: <input type="text" name="color"></label></p>
+    <p><label> Dimentions: <input type="text" name="dimentions"></label></p>
+    <p><label> Fins: <input type="text" name="fins"></label></p>
+    <p><label> Finbox: <input type="text" name="finbox"></label></p>
+    <p><label> Volume: <input type="integer" name="volume"></label></p>
+    <p><label> Dings: <input type="integer" name="dings"></label></p>
+    <p><label> Watertight? <input type="checkbox" id="yes" name="watertight" value="Yes">Yes<input type="checkbox" id="no" name="watertight" value="No surfin' today">No</label></p>
+  <input type="submit">
+</form>
