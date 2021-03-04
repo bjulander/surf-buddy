@@ -1,4 +1,4 @@
-<h1><%= @user.username %>'s Quiver </h1>
+<h1><%= current_user.username %>'s Quiver </h1>
 
 <a href="/boards/new"> 
 <button type="button" value="Add New Board">Add New Board</button></a></p>
@@ -8,13 +8,13 @@
 # <button type="button" value="Edit Board">Edit Board</button></a> </p>
 # </div>
 
-<p> Welcome, <%= @user.username %>
+<p> What up, <%= current_user.username %>
 
-<% @boards.each do |a| %>
-  <div>
-    <label>
-    <%= a.id%>
-    <%= a.nickname%>
+# <% @boards.each do |a| %>
+#   <div>
+#     <label>
+#     <%= a.id%>
+#     <%= a.nickname%>
     
-  </div>
-<% end %>
+#   </div>
+# <% end %>

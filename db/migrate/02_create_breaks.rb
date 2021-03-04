@@ -3,8 +3,8 @@ class CreateBreaks < ActiveRecord::Migration
       create_table :breaks do |t|
         t.text :location
         t.text :name
-        t.text :type
-        t.text :wave
+        t.text :break
+        t.text :direction
         t.text :water_level
         t.integer :user_id
         t.timestamps null: false

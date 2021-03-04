@@ -10,7 +10,6 @@ class UsersController < ApplicationController
 
     post '/signup' do
         @user = User.create(username: params[:username], email: params[:email], password: params[:password])
-        binding.pry
         @messages = @user.errors.full_messages
         if @user.id && @messages.empty?
             session[:user_id] = @user.id
@@ -39,7 +38,7 @@ class UsersController < ApplicationController
         if session[:user_id]
             redirect to "/users/home"
         else
-            redirect to "/signup"
+            redirect to '/signup'
         end
     end
 

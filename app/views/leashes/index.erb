@@ -1,0 +1,16 @@
+<h1> Leashes</h1>
+<br>
+<a href="/leashes/new"> 
+<button type="button" value="Add New Leash">Add New Leash</button></a></p>
+</div>
+<br>
+<h3> Safety First! </h3>
+<br>
+<% @leashes.each do |a| %>
+  <div>
+    <label>
+    <%= a.id%>
+    <%= a.brand%>
+    
+  </div>
+<% end %>

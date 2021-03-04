@@ -1,0 +1,16 @@
+<h1> Breaks</h1>
+<br>
+<a href="/breaks/new"> 
+<button type="button" value="Add New Break">Add New Break</button></a></p>
+</div>
+<br>
+<h3> Pray for sets!</h3>
+<br>
+<% @breaks.each do |a| %>
+  <div>
+    <label>
+    <%= a.id%>
+    <%= a.name%>
+    
+  </div>
+<% end %>

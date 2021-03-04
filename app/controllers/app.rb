@@ -20,6 +20,18 @@ class ApplicationController < Sinatra::Base
       def redirect_if_not_logged_in
         redirect '/signup' unless current_user
       end
+
+      def find_board
+        Board.find_by(params[:id])
+      end
+
+      def find_leash
+        Leash.find_by(params[:id])
+      end
+
+      def find_break
+        Break.find_by(params[:id])
+      end
     end
-  end
+end
   

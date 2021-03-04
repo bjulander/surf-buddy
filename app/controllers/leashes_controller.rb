@@ -1,5 +1,14 @@
 class LeashesController < ApplicationController
+
   get '/leashes' do
+    if session[:user_id]
+        redirect to '/leashes/index'
+    else
+        redirect to '/leashes/new'
+    end 
+  end
+
+  get '/leashes/index' do
     redirect_if_not_logged_in
     @leashes = Leash.all
     if @leashes.empty?
@@ -16,9 +25,9 @@ class LeashesController < ApplicationController
 
   post '/leashes' do
     redirect_if_not_logged_in
-    @Leash = Leash.create(params)
+    @leash = Leash.create(params)
     if @leash.id
-      redirect to '/leashes'
+      redirect to '/leashes/index'
     else
       redirect to '/leashes/new'
     end

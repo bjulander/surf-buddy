@@ -1,0 +1,17 @@
+<h1>Quiver</h1>
+<br>
+<h4>What to do with <%= @board.nickname%>?</h4>
+<br>
+    <a href="/boards/<%=@board.id%>/edit">
+    <input type="button" value="Edit Board" class="front_button"></input> </a> <br>
+    <br>
+    <form method="post" action="/boards/<%=@board.id%>/delete">
+    <input id="hidden" type="hidden" name="_method" value="delete">
+    <input type="submit" value="Remove Board" class="front_button"> 
+    </form>
+    <br>
+    <a href="/boards/index">
+    <input type="button" value="View Quiver" class="front_button"></input> </a> <br>
+    <br>
+    <br>
+    <a href="/logout"> Log Out </a>

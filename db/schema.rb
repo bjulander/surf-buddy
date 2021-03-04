@@ -33,8 +33,8 @@ ActiveRecord::Schema.define(version: 4) do
   create_table "breaks", force: :cascade do |t|
     t.text     "location"
     t.text     "name"
-    t.text     "type"
-    t.text     "wave"
+    t.text     "break"
+    t.text     "direction"
     t.text     "water_level"
     t.integer  "user_id"
     t.datetime "created_at",  null: false
