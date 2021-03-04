@@ -61,7 +61,7 @@ class BoardsController < ApplicationController
     end 
   end
 
-  patch '/boards/:id/edit' do
+  patch "/boards/:id" do
     redirect_if_not_logged_in
     @board = find_board
     if owner?(@board)
@@ -70,15 +70,13 @@ class BoardsController < ApplicationController
     redirect to "/boards/#{@board.id}"
   end
 
-  delete '/boards/:id/delete' do
+  delete "/boards/:id/delete" do
     redirect_if_not_logged_in
     @board = find_board
     if owner?(@board)
-      @board.destory
-      redirect to "/boards"
-    else
-      redirect to "/boards"
-    end 
+      @board.destroy
+    end
+    redirect to "/boards"
   end
 
 

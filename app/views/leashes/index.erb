@@ -9,17 +9,16 @@
 <br>
 <h3> Safety First! </h3>
 <br>
-<% @leashes.each do |a| %>
+<% @leashes.each do |display| %>
   <div>
-    <label>
-    <%= a.id%>
-    <%= a.brand%>
+     <label>
+     <a href= "/leashes/<%= display.id%>"><%= display.nickname%>
     
   </div>
-<% end %>
+ <% end %>
 
 <br>
 <a href="/users/home"> 
 <p><input type="button" value="Home"></input</a></p>
 <a href="/logout">
-<p><input type="button" value="Log out"></input</a></p>
+<p><input type="button" value="Log out"></input></a></p>

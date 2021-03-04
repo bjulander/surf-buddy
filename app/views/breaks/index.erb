@@ -9,17 +9,16 @@
 <br>
 <h5> Pray for sets!</h5>
 <br>
-<% @breaks.each do |a| %>
+<% @breaks.each do |display| %>
   <div>
-    <label>
-    <%= a.id%>
-    <%= a.name%>
+     <label>
+     <a href= "/breaks/<%= display.id%>"><%= display.name%>
     
   </div>
-<% end %>
+ <% end %>
 <br>
 <br>
 <a href="/users/home"> 
 <p><input type="button" value="Home"></input</a></p>
 <a href="/logout">
-<p><input type="button" value="Log out"></input</a></p>
+<p><input type="button" value="Log out"></input></a></p>

@@ -1,0 +1,18 @@
+<h1>My Leashes </h1>
+
+<a href="/leashes/new"> 
+<input type="button" value="Add New Leash"></input></a></p>
+</div>
+
+<p>Safety leashes.each do |display| %>
+  <div>
+     <label>
+     <a href= "/leashes/<%= display.id%>"><%= display.id%> <%=display.nickname%>
+  </div>
+ <% end %>
+
+<br>
+<a href="/users/home"> 
+<p><input type="button" value="Home"></input</a></p>
+<a href="/logout">
+<p><input type="button" value="Log out"></input></a></p>

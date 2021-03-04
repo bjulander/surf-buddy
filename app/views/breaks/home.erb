@@ -1,0 +1,19 @@
+<h1>My Breaks </h1>
+
+<a href="/breaks/new"> 
+<input type="button" value="Add New Break"></input></a></p>
+</div>
+
+<p> So many waves!</p>
+<% @user.breaks.each do |display| %>
+  <div>
+     <label>
+     <a href= "/breaks/<%= display.id%>"><%=display.name%>
+  </div>
+ <% end %>
+
+<br>
+<a href="/users/home"> 
+<p><input type="button" value="Home"></input</a></p>
+<a href="/logout">
+<p><input type="button" value="Log out"></input></a></p>
