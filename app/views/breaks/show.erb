@@ -1,0 +1,20 @@
+<h1>Breaks</h1>
+<br>
+<h4>Lookin at <%= @break.name%></h4>
+<br>
+    <a href="/breaks/<%=@break.id%>/edit">
+    <input type="button" value="Edit Break" class="front_button"></input> </a> <br>
+    <br>
+    <form method="post" action="/breaks/<%=@break.id%>/delete">
+    <input id="hidden" type="hidden" name="_method" value="delete">
+    <input type="submit" value="Remove Break" class="front_button"> 
+    </form>
+    <br>
+    <a href="/breaks/index">
+    <input type="button" value="View Breaks" class="front_button"></input> </a> <br>
+    <br>
+    <br>
+<a href="/users/home"> 
+<p><input type="button" value="Home"></input</a></p>
+<a href="/logout">
+<p><input type="button" value="Log out"></input</a></p>

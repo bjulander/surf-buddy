@@ -1,6 +1,7 @@
 class CreateLeashes < ActiveRecord::Migration
     def change
         create_table :leashes do |t|
+            t.text :nickname
             t.text :brand
             t.text :length
             t.text :thickness

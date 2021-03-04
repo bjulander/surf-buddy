@@ -42,6 +42,7 @@ ActiveRecord::Schema.define(version: 4) do
   end
 
   create_table "leashes", force: :cascade do |t|
+    t.text     "nickname"
     t.text     "brand"
     t.text     "length"
     t.text     "thickness"

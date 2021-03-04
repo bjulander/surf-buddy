@@ -27,9 +27,28 @@ class LeashesController < ApplicationController
     redirect_if_not_logged_in
     @leash = Leash.create(params)
     if @leash.id
-      redirect to '/leashes/index'
+      redirect to "/leashes/#{@leash.id}"
     else
-      redirect to '/leashes/new'
+      redirect to "/leashes/new"
     end
+  end
+
+  get '/leashes/:id' do
+    redirect_if_not_logged_in
+    binding.pry
+    @leash = find_leash
+    erb :"/leashes/show"
+  end
+
+  get '/leashes/:id/edit' do
+    redirect_if_not_logged_in 
+  end
+
+  patch '/leashes/:id/edit' do
+    redirect_if_not_logged_in
+  end
+
+  delete '/leashes/:id/delete' do
+    redirect_if_not_logged_in 
   end
 end

@@ -29,7 +29,7 @@ class BoardsController < ApplicationController
     if @board.id
       redirect to "/boards/#{@board.id}"
     else
-      redirect to '/boards/new'
+      redirect to "/boards/new"
     end
   end
 

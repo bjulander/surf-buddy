@@ -22,15 +22,15 @@ class ApplicationController < Sinatra::Base
       end
 
       def find_board
-        Board.find_by(params[:id])
+        Board.find_by(id: params[:id])
       end
 
       def find_leash
-        Leash.find_by(params[:id])
+        Leash.find_by(id: params[:id])
       end
 
       def find_break
-        Break.find_by(params[:id])
+        Break.find_by(id: params[:id])
       end
     end
 end

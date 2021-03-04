@@ -27,9 +27,28 @@ class BreaksController < ApplicationController
     redirect_if_not_logged_in
     @break = Break.create(params)
     if @break.id
-      redirect to '/breaks/index'
+      redirect to "/breaks/#{@break.id}"
     else
       redirect to '/breaks/new'
     end
   end
+
+  get '/breaks/:id' do
+    redirect_if_not_logged_in
+    @break = find_break
+    erb :"/breaks/show"
+  end
+
+  get '/breaks/:id/edit' do
+    redirect_if_not_logged_in 
+  end
+
+  patch '/breaks/:id/edit' do
+    redirect_if_not_logged_in
+  end
+
+  delete '/breaks/:id/delete' do
+    redirect_if_not_logged_in 
+  end
+
 end
