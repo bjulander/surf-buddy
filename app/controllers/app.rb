@@ -21,6 +21,10 @@ class ApplicationController < Sinatra::Base
         redirect to "/signup" unless current_user
       end
 
+      def owner?(object)
+        object.user == current_user
+      end
+
       def find_board
         Board.find_by(id: params[:id])
       end

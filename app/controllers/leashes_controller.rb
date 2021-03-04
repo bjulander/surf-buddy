@@ -1,31 +1,32 @@
 class LeashesController < ApplicationController
 
-  get '/leashes' do
+  get "/leashes" do
     if session[:user_id]
-        redirect to '/leashes/index'
+        redirect to "/leashes/index"
     else
-        redirect to '/leashes/new'
+        redirect to "/leashes/new"
     end 
   end
 
-  get '/leashes/index' do
+  get "/leashes/index" do
     redirect_if_not_logged_in
+    @user = current_user
     @leashes = Leash.all
-    if @leashes.empty?
-        redirect to '/leashes/new'
-      else
-        erb :'/leashes/index'
-    end
+    erb :"/leashes/index"
   end
 
-  get '/leashes/new' do
+  get "/leashes/new" do
     redirect_if_not_logged_in
-    erb :'/leashes/new'
+    @user = current_user
+    erb :"/leashes/new"
   end
 
-  post '/leashes' do
+  post "/leashes" do
     redirect_if_not_logged_in
+    @user = current_user
     @leash = Leash.create(params)
+    @leash.user = @user
+    @leash.save
     if @leash.id
       redirect to "/leashes/#{@leash.id}"
     else
@@ -33,21 +34,52 @@ class LeashesController < ApplicationController
     end
   end
 
-  get '/leashes/:id' do
+  get "/leashes/home" do
+    redirect_if_not_logged_in
+    @user = current_user
+    @user.leashes
+    if @user.leashes.empty?
+        redirect to "/leashes/new"
+      else
+        erb :"/leashes/home"
+    end
+  end
+
+  get "/leashes/:id" do
     redirect_if_not_logged_in
     @leash = find_leash
     erb :"/leashes/show"
   end
 
-  get '/leashes/:id/edit' do
-    redirect_if_not_logged_in 
-  end
-
-  patch '/leashes/:id/edit' do
+  get "/leashes/:id/edit" do
     redirect_if_not_logged_in
+    @leash = find_leash
+    if owner?(@leash)
+      erb :"/leashes/edit"
+    else
+      redirect to "/leashes/#{@leash.id}"
+    end
+     
   end
 
-  delete '/leashes/:id/delete' do
-    redirect_if_not_logged_in 
+  patch "/leashes/:id/edit" do
+    redirect_if_not_logged_in
+    @leash = find_leash
+    if owner?(@leash)
+      @leash.update
+    end
+    redirect to "/leashes/#{@leash.id}"
   end
+
+  delete "/leashes/:id/delete" do
+    redirect_if_not_logged_in
+    @leash = find_leash
+    if owner?(@leash)
+      @leash.destory
+      redirect to "/leashes"
+    else
+      redirect to "/leashes"
+    end  
+  end
+
 end

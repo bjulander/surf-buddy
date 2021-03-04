@@ -1,7 +1,7 @@
 class CreateBoards < ActiveRecord::Migration
     def change
         create_table :boards do |t|
-            t.text :type #not working since "on" is not a subclass"
+            t.text :type
             t.text :nickname
             t.text :material
             t.text :brand
@@ -11,7 +11,7 @@ class CreateBoards < ActiveRecord::Migration
             t.text :finbox
             t.text :volume
             t.text :dings
-            t.text :watertight #not working since "on" is not a subclass"
+            t.text :watertight
             t.integer :user_id
             t.timestamps null: false
         end

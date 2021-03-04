@@ -41,27 +41,44 @@ class BoardsController < ApplicationController
     if @user.boards.empty?
         redirect to "/boards/new"
       else
-        erb :'/boards/home'
+        erb :"/boards/home"
     end
   end
 
   get "/boards/:id" do
     redirect_if_not_logged_in
-    @user = current_user
     @board = find_board
     erb :"/boards/show"
   end
 
   get '/boards/:id/edit' do
-    redirect_if_not_logged_in 
+    redirect_if_not_logged_in
+    @board = find_board
+    if owner?(@board)
+      erb :"/boards/edit"
+    else
+      redirect to "/boards/#{@board.id}"
+    end 
   end
 
   patch '/boards/:id/edit' do
     redirect_if_not_logged_in
+    @board = find_board
+    if owner?(@board)
+      @board.update
+    end      
+    redirect to "/boards/#{@board.id}"
   end
 
   delete '/boards/:id/delete' do
-    redirect_if_not_logged_in 
+    redirect_if_not_logged_in
+    @board = find_board
+    if owner?(@board)
+      @board.destory
+      redirect to "/boards"
+    else
+      redirect to "/boards"
+    end 
   end
 
 
