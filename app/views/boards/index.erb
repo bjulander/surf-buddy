@@ -1,26 +1,24 @@
-<h1><%= current_user.username %>'s Quiver </h1>
+<h1> Quiver </h1>
 
 <a href="/boards/new"> 
-<button type="button" value="Add New Board">Add New Board</button></a></p>
+<input type="button" value="Add Board"></input></a></p>
+</div>
+<a href="/boards/home"> 
+<input type="button" value="My Quiver"></input></a></p>
 </div>
 
-# <a href="/boards/edit"> 
-# <button type="button" value="Edit Board">Edit Board</button></a> </p>
-# </div>
+<p> Check out all the boards we hold!</p>
 
-<p> What up, <%= current_user.username %>
-
-# <% @boards.each do |a| %>
-#   <div>
-#     <label>
-#     <%= a.id%>
-#     <%= a.nickname%>
+<% @boards.each do |a| %>
+  <div>
+     <label>
+     <a href= "/boards/<%= a.id%>/show"><%= a.nickname%>
     
-#   </div>
-# <% end %>
+  </div>
+ <% end %>
 
 <br>
 <a href="/users/home"> 
 <p><input type="button" value="Home"></input</a></p>
 <a href="/logout">
-<p><input type="button" value="Log out"></input</a></p>
+<p><input type="button" value="Log out"></input></a></p>

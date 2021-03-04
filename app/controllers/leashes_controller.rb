@@ -35,7 +35,6 @@ class LeashesController < ApplicationController
 
   get '/leashes/:id' do
     redirect_if_not_logged_in
-    binding.pry
     @leash = find_leash
     erb :"/leashes/show"
   end

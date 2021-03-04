@@ -1,31 +1,32 @@
 class BoardsController < ApplicationController
 
-  get '/boards' do
+  get "/boards" do
     if session[:user_id]
-        redirect to '/boards/index'
+        redirect to "/boards/index"
     else
-        redirect to '/boards/new'
+        redirect to "/boards/new"
     end 
   end
 
-  get '/boards/index' do
+  get "/boards/index" do
     redirect_if_not_logged_in
+    @user = current_user
     @boards = Board.all
-    if @boards.empty?
-        redirect to '/boards/new'
-      else
-        erb :'/boards/index'
-    end
+    erb :"/boards/index"
   end
 
-  get '/boards/new' do
+  get "/boards/new" do
     redirect_if_not_logged_in
-    erb :'/boards/new'
+    @user = current_user
+    erb :"/boards/new"
   end
 
-  post '/boards' do
+  post "/boards" do
     redirect_if_not_logged_in
+    @user = current_user
     @board = Board.create(params)
+    @board.user = @user
+    @board.save
     if @board.id
       redirect to "/boards/#{@board.id}"
     else
@@ -33,8 +34,20 @@ class BoardsController < ApplicationController
     end
   end
 
-  get '/boards/:id' do
+  get "/boards/home" do
     redirect_if_not_logged_in
+    @user = current_user
+    @user.boards
+    if @user.boards.empty?
+        redirect to "/boards/new"
+      else
+        erb :'/boards/home'
+    end
+  end
+
+  get "/boards/:id" do
+    redirect_if_not_logged_in
+    @user = current_user
     @board = find_board
     erb :"/boards/show"
   end

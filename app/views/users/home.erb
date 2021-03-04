@@ -1,26 +1,19 @@
-
-# <div style="width:300px; margin:auto; position:relative;">
-# <audio controls autoplay loop=true preload src="/music/howl.mp3" type="audio/mp3">
-# </audio>
-# </div>
-
-
-<h1> Welcome <%= @user.username %></h1>
+<h1> Welcome back <%= @user.username.capitalize%>!</h1>
 <h3> </h3>
+<h4><%= See... we told you we could watch your things.</h4>
 <br>
-<p><p>
     <nav>
-        <a href="/boards"> 
-        <button type="button" value="Quiver" class="front_button"> 
-        Quiver</button> </a> <br>
+        <a href="/boards/home"> 
+        <input type="button" value="My Quiver" class="front_button"></a> <br>
         <br><br>
-        <a href="/breaks">
-        <button type="button" value="Breaks" class="front_button"> 
-        Breaks</button> </a> <br>
+        <a href="/breaks/home">
+        <input type="button" value="My Breaks" class="front_button"></a> <br>
         <br><br>
-        <a href="/leashes">
-        <button type="button" value="Leashes" class="front_button"> 
-        Leashes</button> </a> <br>
+        <a href="/leashes/home">
+        <input type="button" value="My Leashes" class="front_button"></a> <br>
+        <br><br>
+        <a href="/users/edit">
+        <input type="button" value=" My Account" class="front_button"></a> <br>
         <br><br>
         <br>
         <a href="/logout"> Log Out </a>

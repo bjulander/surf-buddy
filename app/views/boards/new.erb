@@ -4,22 +4,22 @@
 
     <label> Board Type: </label>
     <br>
-        <input type="checkbox" id="short" name="type">
+        <input type="radio" id="short" name="type" value="short">
             <label for="type">Shortboard</label>
     <br>
-        <input type="checkbox" id="long" name="long" value="longboard">
+        <input type="radio" id="long" name="type" value="longboard">
             <label for="long">Longboard</label>
     <br>
-        <input type="checkbox" id="fun" name="fun" value="Fun">
+        <input type="radio" id="fun" name="type" value="Fun">
             <label for="fun">Funboard</label>
     <br>
-        <input type="checkbox" id="fish" name="fish" value="Fish">
+        <input type="radio" id="fish" name="type" value="Fish">
             <label for="fish">Fish</label>  
     <br>
-        <input type="checkbox" id="beater" name="beater" value="Beater">
+        <input type="radio" id="beater" name="type" value="Beater">
             <label for="beater">Beater</label>
     <br>
-        <input type="checkbox" id="gun" name="gun" value="Gun">
+        <input type="radio" id="gun" name="type" value="Gun">
         <label for="gun">Gun</label>
     <br>
     <br>
@@ -32,6 +32,6 @@
     <p><label> Finbox: <input type="text" name="finbox"></label></p>
     <p><label> Volume: <input type="integer" name="volume"></label></p>
     <p><label> Dings: <input type="integer" name="dings"></label></p>
-    <p><label> Watertight? <input type="checkbox" id="yes" name="watertight" value="Yes">Yes<input type="checkbox" id="no" name="watertight" value="No surfin' today">No</label></p>
+    <p><label> Watertight? <input type="radio" id="yes" name="type" value="Yes">Yes<input type="radio" id="no" name="type" value="No surfin' today">No</label></p>
   <input type="submit">
 </form>
