@@ -1,7 +1,11 @@
+<!DOCTYPE html>
+<!-- Grid -->
+  <div class="w3-row w3-center w3-border">
+
 <h1>Quiver</h1>
 <br>
-<h4>Lookin at <%= @board.nickname%></h4>
-   <a> <%= @board%>
+<h6>Lookin at <%= @board.nickname%></h6>
+   <a> <%= @board.color%>
 <br>
     <a href="/boards/<%=@board.id%>/edit">
     <input type="button" value="Edit Board" class="front_button"></input> </a> <br>
@@ -15,7 +19,3 @@
     <input type="button" value="View Quiver" class="front_button"></input> </a> <br>
     <br>
     <br>
-<a href="/users/home"> 
-<p><input type="button" value="Home"></input</a></p>
-<a href="/logout">
-<p><input type="button" value="Log out"></input></a></p>

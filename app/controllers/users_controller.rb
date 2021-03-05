@@ -1,4 +1,7 @@
+
+
 class UsersController < ApplicationController
+    register Sinatra::Flash
 
     get "/signup" do
         if session[:user_id]
@@ -30,6 +33,7 @@ class UsersController < ApplicationController
     end
 
     get "/users/new" do
+        flash[:message] = "No kooks allowed!"
         erb :"/users/new"
     end
 

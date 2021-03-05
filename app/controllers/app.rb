@@ -1,3 +1,5 @@
+
+
 class ApplicationController < Sinatra::Base
     register Sinatra::Flash
   

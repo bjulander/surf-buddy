@@ -65,7 +65,7 @@ class BreaksController < ApplicationController
     redirect_if_not_logged_in
     @break = find_break
     if owner?(@break)
-      @break.update
+      @break.update(params[:board])
     end
     redirect to "/breaks/#{@break.id}"
   end

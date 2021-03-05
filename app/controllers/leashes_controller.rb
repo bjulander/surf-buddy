@@ -66,7 +66,7 @@ class LeashesController < ApplicationController
     redirect_if_not_logged_in
     @leash = find_leash
     if owner?(@leash)
-      @leash.update
+      @leash.update(params[:board])
     end
     redirect to "/leashes/#{@leash.id}"
   end

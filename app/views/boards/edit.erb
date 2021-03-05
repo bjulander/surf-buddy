@@ -1,3 +1,7 @@
+<!DOCTYPE html>
+<!-- Grid -->
+  <div class="w3-row w3-center w3-border">
+
 <h1>Need an update for <%= @board.nickname%>?</h1>
 <br>
 <form method="post" action="/boards/<%=@board.id%>">
@@ -5,34 +9,34 @@
 
     <label> Board Type: </label>
     <br>
-        <input type="radio" id="type" name="model" value="short">
+        <input type="radio" id="type" name="board[model]" value="short">
             <label for="type">Shortboard</label>
     <br>
-        <input type="radio" id="long" name="model" value="longboard">
+        <input type="radio" id="long" name="board[model]" value="longboard">
             <label for="long">Longboard</label>
     <br>
-        <input type="radio" id="fun" name="model" value="Fun">
+        <input type="radio" id="fun" name="board[model]" value="Fun">
             <label for="fun">Funboard</label>
     <br>
-        <input type="radio" id="fish" name="model" value="Fish">
+        <input type="radio" id="fish" name="board[model]" value="Fish">
             <label for="fish">Fish</label>  
     <br>
-        <input type="radio" id="beater" name="model" value="Beater">
+        <input type="radio" id="beater" name="board[model]" value="Beater">
             <label for="beater">Beater</label>
     <br>
-        <input type="radio" id="gun" name="model" value="Gun">
+        <input type="radio" id="gun" name="board[model]" value="Gun">
         <label for="gun">Gun</label>
     <br>
     <br>
-    <p><label> Nickname: <input type="text" name="nickname"></label></p>
-    <p><label> Material: <input type="text" name="material"></label></p>
-    <p><label> Brand: <input type="text" name="brand"></label></p>
-    <p><label> Color: <input type="text" name="color"></label></p>
-    <p><label> Dimentions: <input type="text" name="dimentions"></label></p>
-    <p><label> Fins: <input type="text" name="fins"></label></p>
-    <p><label> Finbox: <input type="text" name="finbox"></label></p>
-    <p><label> Volume: <input type="integer" name="volume"></label></p>
-    <p><label> Dings: <input type="integer" name="dings"></label></p>
-    <p><label> Watertight? <input type="radio" id="yes" name="watertight" value="Yes">Yes<input type="radio" id="no" name="watertight" value="No surfin' today">No</label></p>
+    <p><label> Nickname: <input type="text" name="board[nickname]"></label></p>
+    <p><label> Material: <input type="text" name="board[material]"></label></p>
+    <p><label> Brand: <input type="text" name="board[brand]"></label></p>
+    <p><label> Color: <input type="text" name="board[color]"></label></p>
+    <p><label> Dimentions: <input type="text" name="board[dimentions]"></label></p>
+    <p><label> Fins: <input type="text" name="board[fins]"></label></p>
+    <p><label> Finbox: <input type="text" name="board[finbox]"></label></p>
+    <p><label> Volume: <input type="integer" name="board[volume]"></label></p>
+    <p><label> Dings: <input type="integer" name="board[dings]"></label></p>
+    <p><label> Watertight? <input type="radio" id="yes" name="board[watertight]" value="Yes">Yes<input type="radio" id="no" name="board[watertight]" value="No surfin' today">No</label></p>
   <input type="submit">
 </form>

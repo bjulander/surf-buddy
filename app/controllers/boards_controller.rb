@@ -1,3 +1,5 @@
+
+
 class BoardsController < ApplicationController
 
   get "/boards" do
@@ -65,12 +67,12 @@ class BoardsController < ApplicationController
     redirect_if_not_logged_in
     @board = find_board
     if owner?(@board)
-      @board.update
-    end      
+      @board.update(params[:board])
+    end     
     redirect to "/boards/#{@board.id}"
   end
 
-  delete "/boards/:id/delete" do
+  delete "/boards/:id" do
     redirect_if_not_logged_in
     @board = find_board
     if owner?(@board)
