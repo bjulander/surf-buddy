@@ -14,7 +14,7 @@
 ActiveRecord::Schema.define(version: 4) do
 
   create_table "boards", force: :cascade do |t|
-    t.text     "type"
+    t.text     "model"
     t.text     "nickname"
     t.text     "material"
     t.text     "brand"
