@@ -42,7 +42,7 @@ class UsersController < ApplicationController
         if session[:user_id]
             redirect to "/users/index"
         else
-            redirect to "/signup"
+            redirect to "/"
         end
     end
 

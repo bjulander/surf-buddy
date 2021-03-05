@@ -35,7 +35,9 @@ ActiveRecord::Schema.define(version: 4) do
     t.text     "name"
     t.text     "break"
     t.text     "direction"
+    t.text     "height"
     t.text     "water_level"
+    t.text     "shakas"
     t.integer  "user_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false

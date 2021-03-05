@@ -6,9 +6,9 @@
 
 <form method="post" action="/leashes/<%=@leash.id%>">
   <input id="hidden" type="hidden" name="_method" value="patch">
-    <p><label> Nickname: <input type="text" name="nickname"></label></p>
-    <p><label> Brand: <input type="text" name="brand"></label></p>
-    <p><label> Length: <input type="text" name="length"></label></p>
-    <p><label> Thickness: <input type="text" name="thickness"></label></p>
+    <p><label> Nickname: <input type="text" name="leash[nickname]"></label></p>
+    <p><label> Brand: <input type="text" name="leash[brand]"></label></p>
+    <p><label> Length: <input type="text" name="leash[length]"></label></p>
+    <p><label> Thickness: <input type="text" name="leash[thickness]"></label></p>
   <input type="submit">
 </form>
