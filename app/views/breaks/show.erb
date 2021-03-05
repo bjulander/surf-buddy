@@ -1,24 +1,25 @@
 <!DOCTYPE html>
 <!-- Grid -->
   <div class="w3-row w3-center w3-border">
-
 <h1>Breaks</h1>
-<br>
-<h4>Lookin at <%= @break.name%></h4>
-<br>
+<h2 class="w3-wide">Lookin at <%= @break.name%></h2>
+<p><label> Location: <%= @break.location%></label></p>
+<p><label> Break: <%= @break.break%></label></p>
+<p><label> Direction: <%= @break.direction%></label></p>
+<p><label> Height: <%= @break.height%></label></p>
+<p><label> Water Level: <%= @break.water_level%></label></p>
+<p><label> Shakas: <%= @break.shakas%></label></p>
+</div>
+<!-- BUTTONS -->
+<div class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-medium">
     <a href="/breaks/<%=@break.id%>/edit">
     <input type="button" value="Edit Break" class="front_button"></input> </a> <br>
     <br>
-    <form method="post" action="/breaks/<%=@break.id%>/delete">
+    <form method="post" action="/breaks/<%=@break.id%>">
     <input id="hidden" type="hidden" name="_method" value="delete">
     <input type="submit" value="Remove Break" class="front_button"> 
     </form>
     <br>
     <a href="/breaks/index">
     <input type="button" value="View Breaks" class="front_button"></input> </a> <br>
-    <br>
-    <br>
-<a href="/users/home"> 
-<p><input type="button" value="Home"></input</a></p>
-<a href="/logout">
-<p><input type="button" value="Log out"></input></a></p>
+</div>

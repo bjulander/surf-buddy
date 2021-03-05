@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <!-- Grid -->
   <div class="w3-row w3-center w3-border">
-
 <h1>Leashes</h1>
-<br>
-<h4>Lookin at <%= @leash.nickname%></h4>
-<br>
-    <a href="/leashes/<%=@leash.id%>/edit">
+<h2 class="w3-wide">Lookin at <%= @leash.nickname%></h2>
+<p><label> Brand: <%= @leash.brand%></label></p>
+<p><label> Length: <%= @leash.length%></label></p>
+<p><label> Thickness: <%= @leash.thickness%></label></p>
+<p><label> Color: <%= @leash.color%></label></p>
+</div>
+
+<!-- BUTTONS -->
+  <div class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-medium">
+    <a href="/leashes/<%=@leash.id%>">
     <input type="button" value="Edit Leash" class="front_button"></input> </a> <br>
     <br>
-    <form method="post" action="/leashes/<%=@leash.id%>/delete">
+    <form method="post" action="/leashes/<%=@leash.id%>">
     <input id="hidden" type="hidden" name="_method" value="delete">
     <input type="submit" value="Remove Leash" class="front_button"> 
     </form>
     <br>
     <a href="/leashes/index">
     <input type="button" value="View Leashes" class="front_button"></input> </a> <br>
-    <br>
-    <br>
-    <a href="/users/home"> 
-    <p><input type="button" value="Home"></input</a></p>
-    <a href="/logout">
-    <p><input type="button" value="Log out"></input></a></p>
+</div>

@@ -62,20 +62,20 @@ class LeashesController < ApplicationController
      
   end
 
-  patch "/leashes/:id/edit" do
+  patch "/leashes/:id" do
     redirect_if_not_logged_in
     @leash = find_leash
     if owner?(@leash)
-      @leash.update(params[:board])
+      @leash.update(params[:leash])
     end
     redirect to "/leashes/#{@leash.id}"
   end
 
-  delete "/leashes/:id/delete" do
+  delete "/leashes/:id" do
     redirect_if_not_logged_in
     @leash = find_leash
     if owner?(@leash)
-      @leash.destory
+      @leash.destroy
       redirect to "/leashes"
     else
       redirect to "/leashes"

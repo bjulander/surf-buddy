@@ -61,20 +61,20 @@ class BreaksController < ApplicationController
     end
   end
 
-  patch "/breaks/:id/edit" do
+  patch "/breaks/:id" do
     redirect_if_not_logged_in
     @break = find_break
     if owner?(@break)
-      @break.update(params[:board])
+      @break.update(params[:break])
     end
     redirect to "/breaks/#{@break.id}"
   end
 
-  delete "/breaks/:id/delete" do
+  delete "/breaks/:id" do
     redirect_if_not_logged_in
     @break = find_break
     if owner?(@break)
-      @break.destory
+      @break.destroy
       redirect to "/breaks"
     else
       redirect to "/breaks"
