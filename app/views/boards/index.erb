@@ -5,18 +5,14 @@
 <h1> Quiver </h1>
 
 <a href="/boards/new"> 
-<input type="button" value="Add New Board"></input></a></p>
-</div>
+<input type="button" value="Add New Board"></input></a><br><br>
 <a href="/boards/home"> 
-<input type="button" value="My Quiver"></input></a></p>
-</div>
+<input type="button" value="My Quiver"></input></a><br><br>
 
-<p> Check out all the boards we hold!</p>
+<h3> Check out all the boards we hold!</h3>
 
 <% @boards.each do |display| %>
-  <div>
      <label>
-     <a href= "/boards/<%= display.id%>"><%= display.nickname%>
-    
-  </div>
+     <p><a href= "/boards/<%= display.id%>"><%= display.nickname%></p>
  <% end %>
+ </div>

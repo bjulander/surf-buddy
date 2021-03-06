@@ -5,13 +5,11 @@
 <h1>My Breaks </h1>
 
 <a href="/breaks/new"> 
-<input type="button" value="Add New Break"></input></a></p>
-</div>
+<input type="button" value="Add New Break"></input></a><br>
 
-<p> So many waves!</p>
+<h3> So many waves!</h3>
 <% @user.breaks.each do |display| %>
-  <div>
-     <label>
-     <a href= "/breaks/<%= display.id%>"><%=display.name%>
-  </div>
+       <label>
+     <p><a href= "/breaks/<%= display.id%>"><%=display.name%></p>
  <% end %>
+ </div>

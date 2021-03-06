@@ -5,12 +5,10 @@
 <h1>My Leashes </h1>
 
 <a href="/leashes/new"> 
-<input type="button" value="Add New Leash"></input></a></p>
-</div>
-
-<p>Safety leashes.each do |display| %>
-  <div>
+<input type="button" value="Add New Leash"></input></a><br><br>
+<h3>Safety First!</h3> 
+<% @user.leashes.each do |display| %>
      <label>
-     <a href= "/leashes/<%= display.id%>"><%= display.id%> <%=display.nickname%>
-  </div>
+     <p><a href= "/leashes/<%= display.id%>"><%=display.nickname%></p>
  <% end %>
+ </div>

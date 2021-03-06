@@ -39,9 +39,9 @@ class LeashesController < ApplicationController
     @user = current_user
     @user.leashes
     if @user.leashes.empty?
-        redirect to "/leashes/new"
-      else
-        erb :"/leashes/home"
+      redirect to "/leashes/new"
+    else
+      erb :"/leashes/home"
     end
   end
 

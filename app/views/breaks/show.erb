@@ -2,7 +2,7 @@
 <!-- Grid -->
   <div class="w3-row w3-center w3-border">
 <h1>Breaks</h1>
-<h2 class="w3-wide">Lookin at <%= @break.name%></h2>
+<h3>Lookin at <%= @break.name%></h3>
 <p><label> Location: <%= @break.location%></label></p>
 <p><label> Break: <%= @break.break%></label></p>
 <p><label> Direction: <%= @break.direction%></label></p>
@@ -10,6 +10,7 @@
 <p><label> Water Level: <%= @break.water_level%></label></p>
 <p><label> Shakas: <%= @break.shakas%></label></p>
 </div>
+
 <!-- BUTTONS -->
 <div class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-medium">
     <a href="/breaks/<%=@break.id%>/edit">
@@ -21,5 +22,5 @@
     </form>
     <br>
     <a href="/breaks/index">
-    <input type="button" value="View Breaks" class="front_button"></input> </a> <br>
+    <input type="button" value="View Breaks" class="front_button"></input> </a>
 </div>

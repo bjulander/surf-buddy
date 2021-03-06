@@ -2,16 +2,14 @@
 <!-- Grid -->
   <div class="w3-row w3-center w3-border">
 
+
 <h1>My Quiver </h1>
 
 <a href="/boards/new"> 
-<input type="button" value="Add New Board"></input></a></p>
-</div>
-
-<p> My Boards:</p>
+<input type="button" value="Add New Board"></input></a><br><br>
+<h3> My Boards:</h3>
 <% @user.boards.each do |display| %>
-  <div>
      <label>
-     <a href= "/boards/<%= display.id%>"><%=display.nickname%>
-  </div>
+     <p><a href= "/boards/<%= display.id%>"><%=display.nickname%></p>
  <% end %>
+ </div>
