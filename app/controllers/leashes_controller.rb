@@ -58,8 +58,7 @@ class LeashesController < ApplicationController
       erb :"/leashes/edit"
     else
       redirect to "/leashes/#{@leash.id}"
-    end
-     
+    end   
   end
 
   patch "/leashes/:id" do
