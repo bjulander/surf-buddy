@@ -1,7 +1,6 @@
 
 
 class UsersController < ApplicationController
-    register Sinatra::Flash
 
     get "/signup" do
         if session[:user_id]
@@ -14,6 +13,7 @@ class UsersController < ApplicationController
     post "/signup" do
         @user = User.create(username: params[:username], email: params[:email], password: params[:password])
         @messages = @user.errors.full_messages
+        binding.pry
         if @user.id && @messages.empty?
             session[:user_id] = @user.id
             redirect to "/users/index"
