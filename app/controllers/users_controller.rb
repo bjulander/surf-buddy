@@ -1,7 +1,6 @@
 
 
 class UsersController < ApplicationController
-    register Sinatra::Flash
 
     get "/signup" do
         if session[:user_id]
