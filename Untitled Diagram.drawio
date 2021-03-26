@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-03-26T22:32:42.246Z" agent="5.0 (Macintosh; Intel Mac OS X 11_2_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Safari/537.36" etag="nHFXIXSWO4FwtCcTEBe-" version="14.5.3" type="github">
+<mxfile host="app.diagrams.net" modified="2021-03-26T22:33:21.549Z" agent="5.0 (Macintosh; Intel Mac OS X 11_2_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Safari/537.36" etag="WrM6ne0Pd6gO0ai9ksS_" version="14.5.3" type="github">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
     <mxGraphModel dx="838" dy="2010" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -34,7 +34,7 @@
           <mxGeometry y="260" width="240" height="28" as="geometry" />
         </mxCell>
         <mxCell id="zkfFHV4jXpPFQw0GAbJ--6" value="Breaks (Join Table)" style="swimlane;fontStyle=0;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
-          <mxGeometry x="350" y="290" width="160" height="160" as="geometry">
+          <mxGeometry x="360" y="280" width="160" height="160" as="geometry">
             <mxRectangle x="130" y="380" width="160" height="26" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
@@ -106,27 +106,27 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="QL-stuNcuey50woXtUmp-15" value="Vehicles" style="swimlane;fontStyle=0;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
-          <mxGeometry x="170" y="360" width="160" height="180" as="geometry">
+          <mxGeometry x="170" y="360" width="150" height="180" as="geometry">
             <mxRectangle x="340" y="380" width="170" height="26" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="QL-stuNcuey50woXtUmp-28" value="Belongs_to :User" style="rounded=0;whiteSpace=wrap;html=1;align=left;" parent="QL-stuNcuey50woXtUmp-15" vertex="1">
-          <mxGeometry y="26" width="160" height="24" as="geometry" />
+          <mxGeometry y="26" width="150" height="24" as="geometry" />
         </mxCell>
         <mxCell id="QL-stuNcuey50woXtUmp-29" value="Make" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="QL-stuNcuey50woXtUmp-15" vertex="1">
-          <mxGeometry y="50" width="160" height="26" as="geometry" />
+          <mxGeometry y="50" width="150" height="26" as="geometry" />
         </mxCell>
         <mxCell id="QL-stuNcuey50woXtUmp-32" value="Model" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="QL-stuNcuey50woXtUmp-15" vertex="1">
-          <mxGeometry y="76" width="160" height="26" as="geometry" />
+          <mxGeometry y="76" width="150" height="26" as="geometry" />
         </mxCell>
         <mxCell id="QL-stuNcuey50woXtUmp-31" value="Seats" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="QL-stuNcuey50woXtUmp-15" vertex="1">
-          <mxGeometry y="102" width="160" height="26" as="geometry" />
+          <mxGeometry y="102" width="150" height="26" as="geometry" />
         </mxCell>
         <mxCell id="QL-stuNcuey50woXtUmp-30" value="Cargo_room" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="QL-stuNcuey50woXtUmp-15" vertex="1">
-          <mxGeometry y="128" width="160" height="26" as="geometry" />
+          <mxGeometry y="128" width="150" height="26" as="geometry" />
         </mxCell>
         <mxCell id="QL-stuNcuey50woXtUmp-35" value="User_ID" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="QL-stuNcuey50woXtUmp-15" vertex="1">
-          <mxGeometry y="154" width="160" height="26" as="geometry" />
+          <mxGeometry y="154" width="150" height="26" as="geometry" />
         </mxCell>
         <mxCell id="QL-stuNcuey50woXtUmp-49" value="" style="html=1;verticalAlign=bottom;endArrow=block;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1.071;exitDx=0;exitDy=0;exitPerimeter=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="QL-stuNcuey50woXtUmp-27" target="zkfFHV4jXpPFQw0GAbJ--13" edge="1">
           <mxGeometry x="1" y="269" width="80" relative="1" as="geometry">
@@ -150,7 +150,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="QL-stuNcuey50woXtUmp-62" value="Friends" style="swimlane;fontStyle=0;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
-          <mxGeometry y="-240" width="220" height="160" as="geometry">
+          <mxGeometry x="240" y="-240" width="220" height="160" as="geometry">
             <mxRectangle x="130" y="380" width="160" height="26" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
@@ -178,7 +178,7 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="QJUqG75PeON4Z90_GC5Y-5" value="" style="endArrow=classic;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="QL-stuNcuey50woXtUmp-27">
+        <mxCell id="QJUqG75PeON4Z90_GC5Y-5" value="" style="endArrow=classic;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="QL-stuNcuey50woXtUmp-27" target="QL-stuNcuey50woXtUmp-33">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="290" y="310" as="sourcePoint" />
             <mxPoint x="350" y="360" as="targetPoint" />
